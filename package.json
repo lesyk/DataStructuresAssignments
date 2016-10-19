@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "typescript": "^2.0.3"
+  },
+  "devDependencies": {},
+  "name": "DataStructures",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
