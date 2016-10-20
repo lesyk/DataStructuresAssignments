@@ -62,25 +62,25 @@ function matchBrackets(inputText: string): string {
   }
 }
 
-// let readline = require('readline');
-// let rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout,
-//     terminal: false
-// });
+let readline = require('readline');
+let rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    terminal: false
+});
 
-// rl.on('line', function(line){
-//     console.log(matchBrackets(line));
-//     process.exit();
-// })
-
-const testFolder = './tests/';
-const fs = require('fs');
-fs.readdir(testFolder, (err, files) => {
-  files.forEach(file => {
-    fs.readFile(testFolder+file, 'utf8', (err, data) => {
-      if (err) throw err;
-      console.log(matchBrackets(data));
-    });
-  });
+rl.on('line', function(line){
+    console.log(matchBrackets(line));
+    process.exit();
 })
+
+// const testFolder = './tests/';
+// const fs = require('fs');
+// fs.readdir(testFolder, (err, files) => {
+//   files.forEach(file => {
+//     fs.readFile(testFolder+file, 'utf8', (err, data) => {
+//       if (err) throw err;
+//       console.log(matchBrackets(data));
+//     });
+//   });
+// })

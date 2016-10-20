@@ -6,7 +6,7 @@ class Tree {
 		this.tree = line.split(' ').map(function(el) { return parseInt(el, 10); });
 	}
 
-	getTreeHeight():number {
+	computeHeight():number {
     let depths = [];
     let currDepth = 1;
 
@@ -83,28 +83,26 @@ let rl = readline.createInterface({
   terminal: false
 });
 
-// let lineNumber = 1;
-// rl.on('line', function(line){
-// 	if(lineNumber === 1){
-// 		tree = new TreeHeight(parseInt(line));
-// 	}
-// 	if(lineNumber === 2){
-// 		console.log(tree.computeHeight(line));
-// 		process.exit();
-// 	}
-// 	lineNumber++;
-// })
-
-const testFolder = './tests/';
-const fs = require('fs');
-fs.readdir(testFolder, (err, files) => {
-  files.forEach(file => {
-		if(file.indexOf(".a")=== -1){
-			fs.readFile(testFolder+file, 'utf8', (err, data) => {
-				let lines = data.split("\r\n");
-				let tree = new Tree(lines[1]);
-				console.log(`${tree.getTreeHeight()}`);
-			});
-		}
-  });
+let lineNumber = 1;
+rl.on('line', function(line){
+	if(lineNumber === 2){
+		let tree = new Tree(line);
+		console.log(tree.computeHeight());
+		process.exit();
+	}
+	lineNumber++;
 })
+
+// const testFolder = './tests/';
+// const fs = require('fs');
+// fs.readdir(testFolder, (err, files) => {
+//   files.forEach(file => {
+// 		if(file.indexOf(".a")=== -1){
+// 			fs.readFile(testFolder+file, 'utf8', (err, data) => {
+// 				let lines = data.split("\r\n");
+// 				let tree = new Tree(lines[1]);
+// 				console.log(`${tree.computeHeight()}`);
+// 			});
+// 		}
+//   });
+// })
