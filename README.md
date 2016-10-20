@@ -15,5 +15,7 @@
 
 ##Run
 `tsc -w WeekX/folder/script.ts`
+
 `cd WeekX/folder/`
+
 `node script.js`
