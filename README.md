@@ -9,9 +9,9 @@
  5. Binary Search Trees 2
 
 ##Instalation of dependancies:
-1. install node
-2. install yarn
-3. yarn install
+1. `install node`
+2. `install yarn`
+3. `yarn install`
 
 ##Run
 `tsc -w WeekX/folder/script.ts`
